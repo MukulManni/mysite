@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,14 +30,16 @@
             font-weight: bolder;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             margin: 0.5em 0;
         }
 
         h1 {
             font-size: 1.5em;
-            color:  #3498db;
-            margin-bottom: 0; /* Adjusted margin here */
+            color: #3498db;
+            margin-bottom: 0;
+            /* Adjusted margin here */
         }
 
         p {
@@ -99,7 +102,7 @@
         .dark-mode a:hover {
             color: #f39c12;
         }
-        
+
         footer {
             background-color: #333;
             color: #fff;
@@ -156,8 +159,36 @@
         button:hover {
             background-color: #2980b9;
         }
+
+        @media (max-width: 320px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            nav {
+                background-color: #262626;
+                /* Change the background color for mobile */
+            }
+
+            nav a {
+                display: block;
+                /* Ensure links are stacked vertically on mobile */
+                margin: 0.5em 0;
+            }
+
+            .navbar-toggler {
+                display: block;
+                /* Ensure the toggle button is visible on mobile */
+            }
+
+            .collapse.navbar-collapse {
+                display: none;
+                /* Hide the regular navbar items on mobile */
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -165,6 +196,9 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -181,22 +215,27 @@
                 </li>
             </ul>
         </div>
-   </nav>
-        <section id="contact-form">
-            <form>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email address" required>
+    </nav>
+    <section id="contact-form">
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="12" placeholder="Write your message here" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2023 Mukul Manni | Made with ❤️
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="12" placeholder="Write your message here" required></textarea>
-    
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    
-        <footer>
-            &copy; 2023 Mukul Manni | Made with ❤️
-        </footer>
-    
-    </body>
-    </html>
+</body>
+
+</html>
